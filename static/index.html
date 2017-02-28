@@ -4,13 +4,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Todo App</title>
+
+    <style>
+      /* Block-Element-Modifier */
+      .todo--complete {
+        color: #eee;
+        text-decoration: line-through;
+      }
+    </style>
   </head>
   <body ng-controller="TodoController as ctrl">
-    <h1>Welcome!</h1>
+    <h1>The Todo App!</h1>
 
-    <!-- html can go here -->
+    <form id="addTodoForm">
+      <label for="newTodoText">New Todo:</label>
+      <input id="newTodoText" type="text" />
+      <button type="submit">Add Todo!</button>
+    </form>
+
+    <button id="toggleBtn">Toggle Filter</button>
+
+    <ul id="todoList">
+      <li>Loading</li>
+    </ul>
 
     <script src="/static/bundle.js"></script>
   </body>
 </html>
-
